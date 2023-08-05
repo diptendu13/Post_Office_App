@@ -11,6 +11,5 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
 const getStarted = document.getElementById('get-started');
 
 getStarted.addEventListener('click', () => {
-    
-    window.open('./postOfficeApp.html', '_blank');
+    location.href = './postOfficeApp.html';
 });
