@@ -35,7 +35,7 @@ const IP = localStorage.getItem('ipAddress');
 async function getIpInfo() {
 
     // fetch ip info
-    var url = `https:api.ipapi.is/?q=${IP}`;
+    var url = `https://api.ipapi.is/?q=${IP}`;
 
     var response = await fetch(url);
     var data = await response.json();
