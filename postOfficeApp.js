@@ -35,18 +35,17 @@ const IP = localStorage.getItem('ipAddress');
 async function getIpInfo() {
 
     // fetch ip info
-    var url = `http://ip-api.com/json/${IP}`;
-    // var url = `https:api.ipapi.is/?q=${IP}`;
+    var url = `https:api.ipapi.is/?q=${IP}`;
 
     var response = await fetch(url);
     var data = await response.json();
 
     console.log(data);
     // store the date and time value returned according to timezone
-    var currDateTime = getDateTimeViaTimezone(data.timezone);
+    var currDateTime = getDateTimeViaTimezone(data.location.timezone);
 
     // store the list of post-offices returned according to the pincode
-    var postOfficeData = await getPostOfficesViaPincode(data.zip);
+    var postOfficeData = await getPostOfficesViaPincode(data.location.zip);
 
     // finally, render all data obtained on DOM
     renderData(data, currDateTime, postOfficeData);
@@ -79,22 +78,22 @@ function renderData(data, currDateTime, postOfficeData) {
 
     // set data for first section
     ipValue.innerText = IP;
-    latValue.innerText = `${data.lat}`;
-    cityValue.innerText = `${data.city}`;
-    organisationValue.innerText = `${data.org}`;
-    longValue.innerText = `${data.lon}`;
-    regionValue.innerText = `${data.regionName}`;
-    hostnameValue.innerText = `${data.isp}`;
+    latValue.innerText = `${data.location.latitude}`;
+    cityValue.innerText = `${data.location.city}`;
+    organisationValue.innerText = `${data.asn.org}`;
+    longValue.innerText = `${data.location.longitude}`;
+    regionValue.innerText = `${data.location.state}`;
+    hostnameValue.innerText = `${data.company.domain}`;
 
 
     // set data for second section
-    mapLocation.setAttribute('src', `https://maps.google.com/maps?q=${data.lat}, ${data.lon}&z=15&output=embed`);
+    mapLocation.setAttribute('src', `https://maps.google.com/maps?q=${data.location.latitude}, ${data.location.longitude}&z=15&output=embed`);
 
 
     // set data for third section
-    timeZoneValue.innerText = `${data.timezone}`;
+    timeZoneValue.innerText = `${data.location.timezone}`;
     dateTimeValue.innerText = currDateTime;
-    pincodeValue.innerText = `${data.zip}`;
+    pincodeValue.innerText = `${data.location.zip}`;
     messageValue.innerText = `${postOfficeData[0].Message}`;
 
 
