@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Office App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./postOfficeApp.css">
+</head>
+<body>
+    <main class="main-section">
+
+        <div class="first-section">
+            <div class="first-ip">
+                <span id="ip">IP Address :</span>
+                <span id="ip-value"></span>
+            </div>
+            <div class="first-info">
+                <div class="first-sub-info">
+                    <span id="lat">Lat :</span>
+                    <span id="lat-value"></span>
+                </div>
+                <div class="first-sub-info">
+                    <span id="city">City :</span>
+                    <span id="city-value"></span>
+                </div>
+                <div class="first-sub-info">
+                    <span id="organisation">Organisation :</span>
+                    <span id="organisation-value"></span>
+                </div>
+                <div class="first-sub-info">
+                    <span id="long">Long :</span>
+                    <span id="long-value"></span>
+                </div>
+                <div class="first-sub-info">
+                    <span id="region">Region :</span>
+                    <span id="region-value"></span>
+                </div>
+                <div class="first-sub-info">
+                    <span id="hostname">Hostname :</span>
+                    <span id="hostname-value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="second-section">
+            <div class="second-heading">Your Current Location</div>
+            <div class="second-map">
+                <div class="second-map-container">
+                    <iframe src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed" width="360" height="270" frameborder="0" style="border:0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="third-section">
+            <div class="third-heading">More Information About You</div>
+            <div class="third-info">
+                <div class="third-sub-info">
+                    <span id="time-zone">Time Zone :</span>
+                    <span id="time-zone-value"></span>
+                </div>
+                <div class="third-sub-info">
+                    <span id="date-time">Date And Time :</span>
+                    <span id="date-time-value"></span>
+                </div>
+                <div class="third-sub-info">
+                    <span id="pincode">Pincode :</span>
+                    <span id="pincode-value"></span>
+                </div>
+                <div class="third-sub-info">
+                    <span id="message">Message :</span>
+                    <span id="message-value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="fourth-section">
+            <div class="fourth-heading">Post Offices Near You</div>
+            <div class="searchbar">
+                <div id="search-image">
+                    <img src="./search-icon.png" alt="search-icon">
+                </div>
+                <input type="text" placeholder="Search by Name and Branch Type" id="search-input">
+            </div>
+            <div class="fourth-info">
+                <!-- add post office list here dynamically using JS -->
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./postOfficeApp.js"></script>
+</body>
+</html>

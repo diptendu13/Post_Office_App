@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    min-width: 1240px;
+}
+
+
+/* -----------------first section---------------- */
+
+.main-section .first-section {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 80px 20px;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5c5e66;
+    background-color: black;
+}
+
+.first-section .first-ip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#ip-value {
+    color: #b8bccc;
+}
+
+.first-section .first-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+}
+
+.first-info .first-sub-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    max-width: 487px;
+}
+
+.first-sub-info span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.first-sub-info span:last-child:hover {
+    white-space: normal;
+}
+
+
+/* -----------------second section----------------- */
+
+.main-section .second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px 50px 0px;
+    background-color: #575a85;
+}
+
+.second-section .second-heading {
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b8bccc;
+    padding: 10px 10px 20px 10px ;
+}
+
+.second-section .second-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.second-map .second-map-container {
+    width: 1200px;
+    height: 600px;
+    flex: 1 1 auto;
+}
+
+.second-map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------------third section------------ */
+
+.main-section .third-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 50px 20px;
+    gap: 20px;
+    background-color: black;
+}
+
+.third-section .third-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #b8bccc;
+    padding: 20px;
+}
+
+.third-section .third-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.third-info .third-sub-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: #5c5e66;;
+}
+
+.third-sub-info span:last-child {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* ---------------fourth section-------------- */
+
+.main-section .fourth-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.fourth-section .fourth-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #b8bccc;
+    padding: 10px 20px 50px 20px;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    border: 3px solid #575a85;
+    min-height: 56px;
+    width: 98%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#search-input {
+    font-size: 22px;
+    min-height: 40px;
+    flex: 1 1 auto;
+    border: none;
+    outline: none;
+    padding: 0px 15px;
+    background-color: transparent;
+    color: white;
+}
+
+#search-input::placeholder {
+    color: #b8bccc;
+}
+
+#search-image {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    padding: 5px 0px 5px 15px ;
+}
+
+#search-image img {
+    width: 22px;
+    height: 22px;
+}
+
+.fourth-section .fourth-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 98%;
+    gap: 40px;
+    padding: 40px 0px;
+
+}
+
+.fourth-info .fourth-sub-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #575a85;
+}
+
+.fourth-sub-info .part {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #b8bccc;
+}
