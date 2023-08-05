@@ -1,3 +1,11 @@
+$.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        // Setting text of element with id = right-desc-ip
+        $("#loc").html(data.ip);
+        localStorage.setItem('ipAddress', data.ip);
+    });
+
+
 
 const ipValue = document.getElementById('ip-value');
 const latValue = document.getElementById('lat-value');
@@ -28,9 +36,12 @@ async function getIpInfo() {
 
     // fetch ip info
     var url = `http://ip-api.com/json/${IP}`;
+    // var url = `https:api.ipapi.is/?q=${IP}`;
+
     var response = await fetch(url);
     var data = await response.json();
 
+    console.log(data);
     // store the date and time value returned according to timezone
     var currDateTime = getDateTimeViaTimezone(data.timezone);
 
