@@ -3,8 +3,7 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
          
         // Setting text of element with id = right-desc-ip
         $("#right-desc-ip").html(data.ip);
-        // console.log(typeof(data.ip));
-        sessionStorage.setItem('ipAddress', data.ip);
+        localStorage.setItem('ipAddress', data.ip);
     });
 
 
@@ -12,6 +11,6 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
 const getStarted = document.getElementById('get-started');
 
 getStarted.addEventListener('click', () => {
-    // location.href = './postOfficeApp.html';
+    
     window.open('./postOfficeApp.html', '_blank');
 });

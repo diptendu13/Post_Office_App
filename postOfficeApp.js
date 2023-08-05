@@ -20,7 +20,7 @@ window.onload = () => {
     getIpInfo();
 }
 
-const IP = sessionStorage.getItem('ipAddress');
+const IP = localStorage.getItem('ipAddress');
 
 
 //----------------- Function to get IP Info--------------------
